@@ -11,7 +11,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/Nihal106/MavenApp-deployment-to-Ec2-with-JenkinsPipeline.git'
+                    url: 'https://github.com/sreeharimm-git/MavenApp-deployment-to-Ec2-with-JenkinsPipeline.git'
             }
         }
 
@@ -29,7 +29,7 @@ stage('Deploy to EC2') {
             sh '''
                 set -e
 
-                HOST="ubuntu@100.24.57.121"
+                HOST="ubuntu@13.61.149.199"
                 JAR="target/demo-1.0.0.jar"
 
                 echo "1. Checking SSH connection..."
